@@ -1,0 +1,256 @@
+{
+  "users": {
+    "vendors": {
+      "-MW92KE_RVA8h-SKQq5_": {
+        "info": {
+          "address": {
+            "latitude": 37.78825,
+            "longitude": -122.4324
+          },
+          "apps": {
+            "facebook": "hwangFacebook",
+            "instagram": "hwang.the.human",
+            "twitter": "@hwang97",
+            "whatsApp": "+1457234-12-44"
+          },
+          "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/b1da5d-c46e-e60e-eb18-772d30f2d107?alt=media&token=12ee9827-6ae1-400b-8319-867fe39307a3",
+          "name": "Robert",
+          "phone": "+1(457)234-12-44",
+          "ssn": 1234,
+          "subTitle": "subTitle",
+          "surname": "Khvan",
+          "time": {
+            "open": true,
+            "weekdays": ["Monday", "Saturday"]
+          },
+          "title": "Title"
+        },
+        "reviews": [
+          {
+            "comment": "Nice!",
+            "comments": 5,
+            "date": "31/05/97",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/bd34f-3f2-4c72-70af-1b6b01bceee?alt=media&token=65f51107-7c28-429a-807b-4c72d1e9a67d",
+            "likes": 123,
+            "name": "Nikolay",
+            "setRating": 3,
+            "surname": "Khvan"
+          },
+          {
+            "comment": "Nice!",
+            "comments": 5,
+            "date": "31/05/97",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/e1c206b-d148-23f6-de2a-5dd26e22b5f?alt=media&token=c9ec10d9-ce7d-490b-9356-5b2a0a748f9c",
+            "likes": 123,
+            "name": "Nikolay",
+            "setRating": 3,
+            "surname": "Khvan"
+          },
+          {
+            "comment": "Nice!",
+            "comments": 5,
+            "date": "31/05/97",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/45b43-2f3c-51fe-560f-2c4f0b438c?alt=media&token=53d75bcd-c257-4a22-ab13-a0d3490aafef",
+            "likes": 123,
+            "name": "Nikolay",
+            "setRating": 4,
+            "surname": "Khvan"
+          }
+        ],
+        "sell": [
+          {
+            "description": "ffff",
+            "distance": 2,
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/2ec1683-1e02-1d-5354-6d57eecf27?alt=media&token=44038c61-e468-4e53-943a-7922c6822727",
+            "price": "$10",
+            "title": "taco"
+          },
+          {
+            "description": "ddd",
+            "distance": 3,
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/e742dd-606-a084-e71d-b6421c04550?alt=media&token=4d7a17a6-b055-4e44-813c-509286d25c37",
+            "price": "$13",
+            "title": "title"
+          },
+          {
+            "description": "aaa",
+            "distance": 16,
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/d43d46-b8eb-f2c1-2e72-565d216ec807?alt=media&token=8c9ac38f-351a-466d-a863-3b887ed3bd34",
+            "price": "$12",
+            "title": "title"
+          }
+        ]
+      },
+      "-MW92_MLYY58N9yhSxJv": {
+        "info": {
+          "address": {
+            "latitude": 37.76,
+            "longitude": -122.4324
+          },
+          "apps": {
+            "facebook": "hwangFacebook",
+            "instagram": "hwang.the.human",
+            "twitter": "@hwang97",
+            "whatsApp": "+1457234-12-44"
+          },
+          "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/0cf0eac-25c-f6b-482-81c2e4e84c55?alt=media&token=142f5a5a-68a1-4259-b75a-c480b514da7d",
+          "name": "John",
+          "phone": "+1(457)234-12-44",
+          "ssn": "12344fjsdf",
+          "subTitle": "subTitle",
+          "surname": "Lee",
+          "time": {
+            "open": true,
+            "weekdays": ["Monday", "Saturday"]
+          },
+          "title": "Title"
+        },
+        "reviews": [
+          {
+            "comment": "Nice!",
+            "comments": 5,
+            "date": "31/05/97",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/bd34f-3f2-4c72-70af-1b6b01bceee?alt=media&token=65f51107-7c28-429a-807b-4c72d1e9a67d",
+            "likes": 123,
+            "name": "Nikolay",
+            "setRating": 3,
+            "surname": "Khvan"
+          },
+          {
+            "comment": "Nice!",
+            "comments": 5,
+            "date": "31/05/97",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/e1c206b-d148-23f6-de2a-5dd26e22b5f?alt=media&token=c9ec10d9-ce7d-490b-9356-5b2a0a748f9c",
+            "likes": 123,
+            "name": "Nikolay",
+            "setRating": 3,
+            "surname": "Khvan"
+          },
+          {
+            "comment": "Nice!",
+            "comments": 5,
+            "date": "31/05/97",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/45b43-2f3c-51fe-560f-2c4f0b438c?alt=media&token=53d75bcd-c257-4a22-ab13-a0d3490aafef",
+            "likes": 123,
+            "name": "Nikolay",
+            "setRating": 4,
+            "surname": "Khvan"
+          }
+        ],
+        "sell": [
+          {
+            "description": "sdf",
+            "distance": 4,
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/2ec1683-1e02-1d-5354-6d57eecf27?alt=media&token=44038c61-e468-4e53-943a-7922c6822727",
+            "price": "$5",
+            "title": "title"
+          },
+          {
+            "description": "sdf",
+            "distance": 45,
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/e742dd-606-a084-e71d-b6421c04550?alt=media&token=4d7a17a6-b055-4e44-813c-509286d25c37",
+            "price": "$555",
+            "title": "title"
+          },
+          {
+            "description": "fd",
+            "distance": 56,
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/d43d46-b8eb-f2c1-2e72-565d216ec807?alt=media&token=8c9ac38f-351a-466d-a863-3b887ed3bd34",
+            "price": "$32",
+            "title": "taco"
+          }
+        ]
+      },
+      "-MW92hCm_LYSBZbHJeyX": {
+        "info": {
+          "address": {
+            "latitude": 37.8,
+            "longitude": -122.4324
+          },
+          "apps": {
+            "facebook": "hwangFacebook",
+            "instagram": "hwang.the.human",
+            "twitter": "@hwang97",
+            "whatsApp": "+1457234-12-44"
+          },
+          "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/8cdf2cf-8eb2-70c-257-72ca45dd0158?alt=media&token=237faf17-d6b4-4481-b1d5-5ba77d222596",
+          "name": "Zarina",
+          "phone": "+1(457)234-12-44",
+          "ssn": "234r2345",
+          "subTitle": "subTitle",
+          "surname": "Khvan",
+          "time": {
+            "open": true,
+            "weekdays": ["Monday", "Saturday"]
+          },
+          "title": "Title"
+        },
+        "reviews": [
+          {
+            "comment": "Nice!",
+            "comments": 5,
+            "date": "31/05/97",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/bd34f-3f2-4c72-70af-1b6b01bceee?alt=media&token=65f51107-7c28-429a-807b-4c72d1e9a67d",
+            "likes": 123,
+            "name": "Nikolay",
+            "setRating": 3,
+            "surname": "Khvan"
+          },
+          {
+            "comment": "Nice!",
+            "comments": 5,
+            "date": "31/05/97",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/e1c206b-d148-23f6-de2a-5dd26e22b5f?alt=media&token=c9ec10d9-ce7d-490b-9356-5b2a0a748f9c",
+            "likes": 123,
+            "name": "Nikolay",
+            "setRating": 3,
+            "surname": "Khvan"
+          },
+          {
+            "comment": "Nice!",
+            "comments": 5,
+            "date": "31/05/97",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/45b43-2f3c-51fe-560f-2c4f0b438c?alt=media&token=53d75bcd-c257-4a22-ab13-a0d3490aafef",
+            "likes": 123,
+            "name": "Nikolay",
+            "setRating": 4,
+            "surname": "Khvan"
+          }
+        ],
+        "sell": [
+          {
+            "description": "ffff",
+            "distance": 234,
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/2ec1683-1e02-1d-5354-6d57eecf27?alt=media&token=44038c61-e468-4e53-943a-7922c6822727",
+            "price": "$100",
+            "title": "title"
+          },
+          {
+            "description": "ddd",
+            "distance": 7,
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/e742dd-606-a084-e71d-b6421c04550?alt=media&token=4d7a17a6-b055-4e44-813c-509286d25c37",
+            "price": "$134",
+            "title": "title"
+          },
+          {
+            "description": "aaa",
+            "distance": 4,
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/d43d46-b8eb-f2c1-2e72-565d216ec807?alt=media&token=8c9ac38f-351a-466d-a863-3b887ed3bd34",
+            "price": "$125",
+            "title": "taco"
+          }
+        ]
+      }
+    },
+    "consumers": {
+      "-MW92hCm_LYSBZbHJeyX": {
+        "name": "LoL",
+        "surname": "Lee",
+        "password": "123",
+        "email": "hwang.the.human@gmail.com",
+        "history": [],
+        "cart": []
+      }
+    }
+  }
+}
