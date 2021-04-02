@@ -55,7 +55,7 @@ export default function Reviewer(props) {
 const styles = StyleSheet.create({
   review__container: {
     flexDirection: 'column',
-    height: 200,
+    height: 250,
     borderBottomWidth: 0.5,
     borderBottomColor: '#707070',
     justifyContent: 'center',
@@ -107,6 +107,7 @@ const styles = StyleSheet.create({
     marginTop: 10,
     color: 'white',
     fontSize: 20,
+    maxHeight: 100,
   },
   review__likeBox: {
     marginTop: 10,

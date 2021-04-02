@@ -24,50 +24,53 @@ function Info(props) {
 
   function handleShowInMap() {
     props.sheetRef.current.snapTo(1);
+    props.setSelectedView('Home');
     props.mapViewRef.current.animateToRegion(vendor.address, 500);
   }
 
   return (
     <ScrollView style={styles.container} nestedScrollEnabled={true}>
-      <Text style={styles.title}>Street Tacos</Text>
-      <Text style={styles.subTitle}>
-        The best street tacos by {vendor.name}!
-      </Text>
-      <Image
-        style={styles.image}
-        source={{
-          uri: vendor.image,
-        }}
-      />
-      <View style={styles.addressBox}>
-        <Text style={styles.addressText}>
-          {fullAddress.replace(/[,](?=.*[,])/g, '\n')}
+      <View style={{width: '90%', alignSelf: 'center'}}>
+        <Text style={styles.title}>{vendor.title}</Text>
+        <Text style={styles.subTitle}>
+          {vendor.subTitle} by {vendor.name}!
         </Text>
-        <TouchableOpacity style={styles.buttonMap} onPress={handleShowInMap}>
-          <Text style={styles.buttonMapText}>Show on Map</Text>
-        </TouchableOpacity>
-      </View>
-      <View style={styles.timeBox}>
-        <Text style={styles.timeText}>Daily 9:30am - 9:00pm</Text>
-        <DotIcon name="dot-single" size={50} color="green" />
-      </View>
-      <View style={styles.phoneBox}>
-        <Text style={styles.addressText}>+1 (253) 457-74-40</Text>
-        <PhoneIcon name="call" size={22} color="#707070" />
-      </View>
-      <View style={styles.socialBox}>
-        <TouchableOpacity style={styles.socialIcon}>
-          <SocialIcon name="instagram" size={30} color="white" />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.socialIcon}>
-          <SocialIcon name="whatsapp" size={30} color="white" />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.socialIcon}>
-          <SocialIcon name="facebook" size={30} color="white" />
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.socialIcon}>
-          <SocialIcon name="twitter" size={30} color="white" />
-        </TouchableOpacity>
+        <Image
+          style={styles.image}
+          source={{
+            uri: vendor.image,
+          }}
+        />
+        <View style={styles.addressBox}>
+          <Text style={styles.addressText}>
+            {fullAddress.replace(/[,](?=.*[,]) /g, '\n')}
+          </Text>
+          <TouchableOpacity style={styles.buttonMap} onPress={handleShowInMap}>
+            <Text style={styles.buttonMapText}>Show on Map</Text>
+          </TouchableOpacity>
+        </View>
+        <View style={styles.timeBox}>
+          <Text style={styles.timeText}>Daily 9:30am - 9:00pm</Text>
+          <DotIcon name="dot-single" size={50} color="green" />
+        </View>
+        <View style={styles.phoneBox}>
+          <Text style={styles.addressText}>{vendor.phone}</Text>
+          <PhoneIcon name="call" size={22} color="#707070" />
+        </View>
+        <View style={styles.socialBox}>
+          <TouchableOpacity style={styles.socialIcon}>
+            <SocialIcon name="instagram" size={30} color="white" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.socialIcon}>
+            <SocialIcon name="whatsapp" size={30} color="white" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.socialIcon}>
+            <SocialIcon name="facebook" size={30} color="white" />
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.socialIcon}>
+            <SocialIcon name="twitter" size={30} color="white" />
+          </TouchableOpacity>
+        </View>
       </View>
     </ScrollView>
   );

@@ -7,10 +7,10 @@ import Consumer from './Consumer';
 import Vendor from './Vendor';
 
 export default function AuthenticationStuck() {
-  const Stuck = createStackNavigator();
+  const Stack = createStackNavigator();
   return (
     <NavigationContainer>
-      <Stuck.Navigator
+      <Stack.Navigator
         screenOptions={{
           headerStyle: {
             backgroundColor: '#111015',
@@ -20,11 +20,11 @@ export default function AuthenticationStuck() {
           headerBackTitleVisible: false,
           headerTintColor: '#707070',
         }}>
-        <Stuck.Screen name="SignIn" component={SignIn} />
-        <Stuck.Screen name="SignUp" component={SignUp} />
-        <Stuck.Screen name="Consumer" component={Consumer} />
-        <Stuck.Screen name="Vendor" component={Vendor} />
-      </Stuck.Navigator>
+        <Stack.Screen name="SignIn" component={SignIn} />
+        <Stack.Screen name="SignUp" component={SignUp} />
+        <Stack.Screen name="Consumer" component={Consumer} />
+        <Stack.Screen name="Vendor" component={Vendor} />
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }

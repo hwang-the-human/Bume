@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useRef} from 'react';
 import {
   StyleSheet,
   Text,
@@ -7,40 +7,64 @@ import {
   SafeAreaView,
   ScrollView,
   TouchableOpacity,
+  FlatList,
 } from 'react-native';
 import FoodItem from '../search/FoodItem';
+import {connect} from 'react-redux';
 
-export default function Cart(props) {
+function mapStateToProps(state) {
+  return {consumer: state.consumerReducer};
+}
+
+function Cart(props) {
+  const cartObjects = props.consumer.values.cart;
+  const scrollRef = useRef(null);
+
+  function handleOrder() {
+    scrollRef.current.scrollToIndex({animated: true, index: 2});
+  }
+
   return (
     <SafeAreaView style={styles.cart}>
-      <ScrollView>
-        <StatusBar barStyle="light-content" />
-        <FoodItem
-          description={'SDFSDF'}
-          // key={index}
-          // sheetRef={props.sheetRef}
-          // description={item.description}
-          // distance={item.distance}
-          // image={item.image}
-          // price={item.price}
-          // title={item.title}
-          // items={item}
+      <StatusBar barStyle="light-content" />
+      {cartObjects === undefined ? (
+        <Text
+          style={{
+            color: 'white',
+            fontSize: 40,
+            alignSelf: 'center',
+            top: 350,
+          }}>
+          Empty
+        </Text>
+      ) : (
+        <FlatList
+          style={{width: '100%', marginBottom: '15%'}}
+          showsVerticalScrollIndicator={false}
+          ref={scrollRef}
+          data={Object.values(cartObjects)}
+          renderItem={(element) => (
+            <FoodItem
+              sheetRef={props.sheetRef}
+              distance={element.item.distance}
+              item={element.item}
+              id={Object.keys(cartObjects)[element.index]}
+              isCartView={true}
+            />
+          )}
+          keyExtractor={(item, index) => Object.keys(cartObjects)[index]}
         />
-      </ScrollView>
-      <View style={styles.cart__priceBox}>
-        <Text style={styles.cart__price}>Total: $300</Text>
-        <TouchableOpacity style={styles.cart__button}>
-          <Text style={styles.cart__buttonText}>Order</Text>
-        </TouchableOpacity>
-      </View>
+      )}
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   cart: {
-    flex: 1,
+    height: '100%',
+    width: '100%',
     backgroundColor: '#111015',
+    alignItems: 'center',
   },
 
   cart__priceBox: {
@@ -72,3 +96,5 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
 });
+
+export default connect(mapStateToProps, null)(Cart);

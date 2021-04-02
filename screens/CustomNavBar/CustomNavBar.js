@@ -21,9 +21,9 @@ function CustomNavBar(props) {
         <Text style={styles.errorText}>Empty</Text>
       ) : (
         <VendorProfileTabs
-          animation={props.animation}
           mapViewRef={props.mapViewRef}
           sheetRef={props.sheetRef}
+          setSelectedView={props.setSelectedView}
         />
       )}
     </View>
@@ -42,7 +42,8 @@ function CustomNavBar(props) {
 const styles = StyleSheet.create({
   bottomContainer: {
     backgroundColor: 'black',
-    padding: 16,
+    paddingTop: 16,
+    paddingBottom: 16,
     height: '100%',
   },
 

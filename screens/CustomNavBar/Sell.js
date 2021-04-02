@@ -1,29 +1,33 @@
-import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import React, {useState, useEffect} from 'react';
+import {StyleSheet, Text, View, FlatList} from 'react-native';
 import FoodItem from '../search/FoodItem';
 import {connect} from 'react-redux';
 import {ScrollView} from 'react-native-gesture-handler';
 
 function mapStateToProps(state) {
-  return {vendor: state.selectedVendorReducer};
+  return {
+    vendor: state.selectedVendorReducer,
+  };
 }
 
 function Sell(props) {
-  const sell = props.vendor.sell;
+  const vendor = props.vendor;
   return (
-    <ScrollView style={styles.sell}>
-      <Text style={styles.sell__categoryText}>Food</Text>
-      {sell.map((item, index) => (
+    <FlatList
+      style={styles.sell}
+      showsVerticalScrollIndicator={false}
+      keyExtractor={(item, index) => Object.keys(vendor.sell)[index]}
+      data={Object.values(vendor.sell)}
+      renderItem={(element) => (
         <FoodItem
-          key={index}
-          animation={props.animation}
-          description={item.description}
-          image={item.image}
-          price={item.price}
-          title={item.title}
+          sheetRef={props.sheetRef}
+          distance={vendor.info.distance}
+          item={element.item}
+          id={Object.keys(vendor.sell)[element.index]}
+          vendor={vendor}
         />
-      ))}
-    </ScrollView>
+      )}
+    />
   );
 }
 

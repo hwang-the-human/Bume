@@ -11,50 +11,56 @@ function mapStateToProps(state) {
 
 function Reviews(props) {
   const reviews = props.vendor.reviews;
+
   function calculateRating() {
     var sumRatings = 0;
     var numberReviewers = 0;
-    reviews.map((reviewer, index) => {
+    reviews.map((reviewer) => {
       sumRatings += reviewer.setRating;
       numberReviewers += 1;
     });
-    sumRatings = Math.round(sumRatings / numberReviewers) + '.0';
-    return sumRatings;
+    return Math.round(sumRatings / numberReviewers);
   }
   return (
     <ScrollView style={styles.container}>
-      <TouchableOpacity style={styles.ratingBox}>
-        <View style={styles.starsBox}>
-          <StarIcon name="staro" size={40} color="gold" />
-          <StarIcon name="staro" size={40} color="gold" />
-          <StarIcon name="staro" size={40} color="gold" />
-          <StarIcon name="staro" size={40} color="gold" />
-          <StarIcon name="staro" size={40} color="gold" />
-        </View>
-        <Text style={styles.textRating}>
-          Have you been here? Write a review!
-        </Text>
-      </TouchableOpacity>
-      <View style={styles.subRatingBox}>
-        <View style={styles.subStarsBox}>
-          <Text style={styles.subTextRating}>{calculateRating()}</Text>
-          <StarIcon name="staro" size={20} color="gold" />
-          <StarIcon name="staro" size={20} color="gold" />
-          <StarIcon name="staro" size={20} color="gold" />
-          <StarIcon name="staro" size={20} color="gold" />
-          <StarIcon name="staro" size={20} color="gold" />
-          <View style={{position: 'absolute', flexDirection: 'row'}}>
-            {reviews.map((reviewer, index) => (
-              <StarIcon key={index} name="star" size={20} color="gold" />
-            ))}
+      <View style={{width: '90%', alignSelf: 'center'}}>
+        <TouchableOpacity style={styles.ratingBox}>
+          <View style={styles.starsBox}>
+            <StarIcon name="staro" size={40} color="gold" />
+            <StarIcon name="staro" size={40} color="gold" />
+            <StarIcon name="staro" size={40} color="gold" />
+            <StarIcon name="staro" size={40} color="gold" />
+            <StarIcon name="staro" size={40} color="gold" />
           </View>
+          <Text style={styles.textRating}>
+            Have you been here? Write a review!
+          </Text>
+        </TouchableOpacity>
+        <View style={styles.subRatingBox}>
+          <View style={styles.subStarsBox}>
+            <Text style={styles.subTextRating}>{calculateRating()}.0</Text>
+            <View style={{flexDirection: 'row'}}>
+              <StarIcon name="staro" size={20} color="gold" />
+              <StarIcon name="staro" size={20} color="gold" />
+              <StarIcon name="staro" size={20} color="gold" />
+              <StarIcon name="staro" size={20} color="gold" />
+              <StarIcon name="staro" size={20} color="gold" />
+              <View style={{position: 'absolute', flexDirection: 'row'}}>
+                {Array.from(Array(calculateRating()), (e, index) => {
+                  return (
+                    <StarIcon key={index} name="star" size={20} color="gold" />
+                  );
+                })}
+              </View>
+            </View>
+          </View>
+          <Text style={styles.subTextRating}>918 reviews</Text>
         </View>
-        <Text style={styles.subTextRating}>918 reviews</Text>
-      </View>
 
-      {reviews.map((reviewer, index) => (
-        <Reviewer key={index} reviewer={reviewer} />
-      ))}
+        {reviews.map((reviewer, index) => (
+          <Reviewer key={index} reviewer={reviewer} />
+        ))}
+      </View>
     </ScrollView>
   );
 }
@@ -103,6 +109,7 @@ const styles = StyleSheet.create({
   },
 
   subTextRating: {
+    textAlign: 'center',
     color: 'white',
     marginRight: 10,
     fontSize: 20,

@@ -31,13 +31,14 @@ export default function VendorProfileTabs(props) {
         <Tab.Screen
           name="Info"
           children={() => (
-            <Info mapViewRef={props.mapViewRef} sheetRef={props.sheetRef} />
+            <Info
+              mapViewRef={props.mapViewRef}
+              sheetRef={props.sheetRef}
+              setSelectedView={props.setSelectedView}
+            />
           )}
         />
-        <Tab.Screen
-          name="Sell"
-          children={() => <Sell animation={props.animation} />}
-        />
+        <Tab.Screen name="Sell" children={() => <Sell />} />
         <Tab.Screen name="Reviews" component={Reviews} />
       </Tab.Navigator>
     </NavigationContainer>

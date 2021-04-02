@@ -1,6 +1,7 @@
-import React, {useState, useRef} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import {
   StyleSheet,
+  TouchableOpacity,
   Text,
   View,
   StatusBar,
@@ -9,14 +10,11 @@ import {
   SafeAreaView,
 } from 'react-native';
 import MapView from 'react-native-map-clustering';
-import {Marker, PROVIDER_DEFAULT} from 'react-native-maps';
-import Geocoder from 'react-native-geocoding';
+import {Callout, Marker, PROVIDER_DEFAULT} from 'react-native-maps';
 import {connect} from 'react-redux';
 import {selectVendor} from '../../redux/vendorReducer';
-import storage from '@react-native-firebase/storage';
-import ImagePicker from 'react-native-image-crop-picker';
-import ImageResizer from 'react-native-image-resizer';
-import uuid from 'react-uuid';
+import Geolocation from '@react-native-community/geolocation';
+import LocationIcon from 'react-native-vector-icons/FontAwesome5';
 
 function mapStateToProps(state) {
   return {vendors: state.vendorReducer};
@@ -29,50 +27,55 @@ function mapDispatchToProps(dispatch) {
 }
 
 function Home(props) {
-  const [image, setImage] = useState();
-  function handleChooseImage() {
-    ImagePicker.openPicker({
-      // width: 80, // 400
-      // height: 80, // 200
-      cropping: true,
-    })
-      .then((image) => {
-        ImageResizer.createResizedImage(
-          image.sourceURL,
-          400,
-          200,
-          'PNG',
-          100,
-          0,
-          null,
-        )
-          .then((response) => {
-            setImage({filename: uuid(), url: response.uri});
-          })
-          .catch((err) => {
-            console.log('ERROR RESIZING IMAGE: ', err);
-          });
-      })
-      .catch((error) => {
-        console.log('ERROR OPEN IMAGE LIBRARY: ', error);
-      });
-  }
-  async function deleteImage() {
-    const reference = storage().refFromURL(
-      'https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/IMG_0004.JPG?alt=media&token=7b46b02c-c566-4dd6-a4fb-3bd034caa9be',
-    );
-    await reference.delete();
-  }
-
-  async function sendImage() {
-    const reference = storage().ref(image.filename);
-    await reference.putFile(image.url);
-  }
+  const [userLocation, setUserLocation] = useState({});
+  const [distance, setDistance] = useState(0);
 
   function handleMarker(vendor) {
+    var newDistance = getDistance(
+      vendor.info.address.latitude,
+      vendor.info.address.longitude,
+      userLocation.latitude,
+      userLocation.longitude,
+    ).toFixed(1);
+    setDistance(newDistance);
     props.mapViewRef.current.animateToRegion(vendor.info.address, 500);
     props.sheetRef.current.snapTo(1);
-    props.selectVendor(vendor);
+    const newVendor = {
+      ...vendor,
+      info: {...vendor.info, distance: newDistance},
+    };
+    props.selectVendor(newVendor);
+  }
+
+  useEffect(() => {
+    Geolocation.getCurrentPosition((info) =>
+      setUserLocation({
+        longitude: info.coords.longitude,
+        latitude: info.coords.latitude,
+      }),
+    );
+  }, []);
+
+  function handleUserLocation() {
+    props.mapViewRef.current.animateToRegion(userLocation, 500);
+  }
+
+  function getDistance(lat1, lon1, lat2, lon2) {
+    var R = 6371;
+    var dLat = deg2rad(lat2 - lat1);
+    var dLon = deg2rad(lon2 - lon1);
+    var a =
+      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+      Math.cos(deg2rad(lat1)) *
+        Math.cos(deg2rad(lat2)) *
+        Math.sin(dLon / 2) *
+        Math.sin(dLon / 2);
+    var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    var d = R * c * 0.62;
+    return d;
+  }
+  function deg2rad(deg) {
+    return deg * (Math.PI / 180);
   }
 
   return (
@@ -80,45 +83,86 @@ function Home(props) {
     //   <Text onPress={handleChooseImage}>Choose</Text>
     //   <Text onPress={sendImage}>Send</Text>
     // </SafeAreaView>
-    <MapView
-      provider={PROVIDER_DEFAULT}
-      animationEnabled={false}
-      ref={props.mapViewRef}
-      initialRegion={{
-        latitude: 37.78825,
-        longitude: -122.4324,
-        latitudeDelta: 0.0922,
-        longitudeDelta: 0.0421,
-      }}
-      style={styles.map}
-      clusterColor="#642D86">
-      {Object.values(props.vendors).map((vendor) => (
-        <Marker
-          tracksViewChanges={false}
-          key={vendor.info.address.latitude}
-          coordinate={vendor.info.address}
-          image={require('../../assets/VendorIcon.png')}
-          onPress={() => handleMarker(vendor)}
-        />
-      ))}
-    </MapView>
+    <View style={{flex: 1}}>
+      <MapView
+        provider={PROVIDER_DEFAULT}
+        showsUserLocation={true}
+        animationEnabled={false}
+        userLocationAnnotationTitle="You are here"
+        ref={props.mapViewRef}
+        initialRegion={{
+          latitude: 34.23833238,
+          longitude: -118.523664572,
+          latitudeDelta: 0.8,
+          longitudeDelta: 0.8,
+        }}
+        style={styles.map}
+        clusterColor="#642D86">
+        {Object.values(props.vendors).map((vendor) => (
+          <Marker
+            tracksViewChanges={false}
+            key={vendor.info.address.latitude}
+            coordinate={vendor.info.address}
+            image={require('../../assets/VendorIcon.png')}
+            onPress={() => handleMarker(vendor)}>
+            <Callout tooltip>
+              <View style={styles.infoWindow}>
+                <Text>{distance} miles away</Text>
+              </View>
+              <View style={styles.arrow}></View>
+            </Callout>
+          </Marker>
+        ))}
+      </MapView>
+      <TouchableOpacity
+        style={styles.locationButton}
+        onPress={handleUserLocation}>
+        <LocationIcon name="location-arrow" size={20} color="white" />
+      </TouchableOpacity>
+    </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#111015',
-  },
   map: {
-    width: '100%',
-    height: '100%',
-    // ...StyleSheet.absoluteFillObject,
+    flex: 2,
   },
 
   MenuNav: {
-    // backgroundColor: 'red',
     flexDirection: 'row',
+  },
+
+  locationButton: {
+    position: 'absolute',
+    backgroundColor: '#642D86',
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: 50,
+    height: 50,
+    borderRadius: 30,
+    right: 20,
+    top: 100,
+  },
+
+  infoWindow: {
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+    width: 110,
+    height: 30,
+    zIndex: 1,
+    borderRadius: 4,
+  },
+
+  arrow: {
+    position: 'absolute',
+    alignSelf: 'center',
+    backgroundColor: 'white',
+    width: 20,
+    transform: [{rotate: '45deg'}],
+    height: 20,
+    top: 16,
+    borderRadius: 4,
   },
 });
 

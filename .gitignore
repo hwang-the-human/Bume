@@ -1,6 +1,7 @@
 # OSX
 #
 .DS_Store
+https:/
 
 # Xcode
 #
@@ -28,7 +29,6 @@ build/
 .gradle
 local.properties
 *.iml
-https:/
 
 # node.js
 #

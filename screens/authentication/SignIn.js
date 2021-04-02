@@ -7,10 +7,42 @@ import {
   TouchableOpacity,
   StatusBar,
 } from 'react-native';
+import database from '@react-native-firebase/database';
+import {connect} from 'react-redux';
+import {setUserId} from '../../redux/vendorReducer';
 
-export default function SignIn({navigation}) {
+function mapDispatchToProps(dispatch) {
+  return {
+    setUserId: (id) => dispatch(setUserId(id)),
+  };
+}
+
+function SignIn(props) {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+
+  function handleSignIn() {
+    var isCorrected = false;
+    database()
+      .ref('/users/consumers')
+      .once('value')
+      .then((snapshot) => {
+        for (const object of Object.entries(snapshot.val())) {
+          if (
+            object[1].email.toUpperCase() == username.toUpperCase() &&
+            object[1].password.toUpperCase() == password.toUpperCase()
+          ) {
+            isCorrected = true;
+            alert('You Have Successfully Logged in!');
+            props.setUserId(object[0]);
+            break;
+          }
+        }
+        if (!isCorrected) {
+          alert('invalid username or password');
+        }
+      });
+  }
 
   return (
     <View style={styles.container}>
@@ -30,13 +62,13 @@ export default function SignIn({navigation}) {
           style={styles.input}
           value={password}
           onChangeText={(text) => setPassword(text)}></TextInput>
-        <TouchableOpacity style={styles.signInButton}>
+        <TouchableOpacity style={styles.signInButton} onPress={handleSignIn}>
           <Text style={styles.signInText}>Sign In</Text>
         </TouchableOpacity>
       </View>
       <View style={styles.textBox}>
         <Text style={styles.subText}>Don't have an account? </Text>
-        <TouchableOpacity onPress={() => navigation.push('SignUp')}>
+        <TouchableOpacity onPress={() => props.navigation.push('SignUp')}>
           <Text style={styles.signUpText}>Sign Up!</Text>
         </TouchableOpacity>
       </View>
@@ -90,8 +122,9 @@ const styles = StyleSheet.create({
   },
 
   signInText: {
-    color: 'white', 
-    fontWeight: '600'},
+    color: 'white',
+    fontWeight: '600',
+  },
 
   textBox: {
     alignSelf: 'center',
@@ -109,3 +142,5 @@ const styles = StyleSheet.create({
     fontWeight: '600',
   },
 });
+
+export default connect(null, mapDispatchToProps)(SignIn);

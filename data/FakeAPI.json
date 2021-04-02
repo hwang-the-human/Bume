@@ -4,88 +4,85 @@
       "-MW92KE_RVA8h-SKQq5_": {
         "info": {
           "address": {
-            "latitude": 37.78825,
-            "longitude": -122.4324
+            "latitude": 34.2,
+            "longitude": -118.55
           },
           "apps": {
             "facebook": "hwangFacebook",
             "instagram": "hwang.the.human",
             "twitter": "@hwang97",
-            "whatsApp": "+1457234-12-44"
+            "whatsApp": "+1(457)427-65-44"
           },
-          "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/b1da5d-c46e-e60e-eb18-772d30f2d107?alt=media&token=12ee9827-6ae1-400b-8319-867fe39307a3",
-          "name": "Robert",
+          "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/f48ae8-e466-78b1-6b0-cbf1ffd7364?alt=media&token=542be87b-9f24-46cc-92cd-a0f18f1b165e",
+          "name": "Kaidan",
           "phone": "+1(457)234-12-44",
           "ssn": 1234,
-          "subTitle": "subTitle",
-          "surname": "Khvan",
+          "subTitle": "The best street Korean food!",
+          "surname": "Oconnell",
           "time": {
             "open": true,
             "weekdays": ["Monday", "Saturday"]
           },
-          "title": "Title"
+          "title": "Korean Food"
         },
         "reviews": [
           {
-            "comment": "Nice!",
-            "comments": 5,
-            "date": "31/05/97",
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/bd34f-3f2-4c72-70af-1b6b01bceee?alt=media&token=65f51107-7c28-429a-807b-4c72d1e9a67d",
-            "likes": 123,
-            "name": "Nikolay",
+            "comment": "I felt like this place was trying too hard. Some of my favorite dishes are no longer available. The photos of the food were appetizing and palpable, but didn't live up to the hype. Satisfactory experience, will come again.",
+            "comments": 12,
+            "date": "4/02/2021",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/f68aa1-1ca8-7ff8-4de-c4f8a4edbe?alt=media&token=1c112d4f-0a42-4f6f-b171-fc6a523ba5d5",
+            "likes": 33,
+            "name": "Elon",
             "setRating": 3,
-            "surname": "Khvan"
+            "surname": "Musk"
           },
           {
-            "comment": "Nice!",
-            "comments": 5,
-            "date": "31/05/97",
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/e1c206b-d148-23f6-de2a-5dd26e22b5f?alt=media&token=c9ec10d9-ce7d-490b-9356-5b2a0a748f9c",
-            "likes": 123,
-            "name": "Nikolay",
-            "setRating": 3,
-            "surname": "Khvan"
+            "comment": "Yumm-o! The experience was heavenly as I was served a meal fit for God himself. Try out the huge selection of incredible appetizers. After my meal, I was knocked into a food coma. This is definitely a spot I'll be frequenting.",
+            "comments": 2,
+            "date": "1/12/2019",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/b76fca3-3408-47f8-ed7a-35b47b28d555?alt=media&token=6280f3e8-b459-41a7-8071-2ee201abca3e",
+            "likes": 2,
+            "name": "Tom",
+            "setRating": 5,
+            "surname": "Cruise"
           },
           {
-            "comment": "Nice!",
-            "comments": 5,
-            "date": "31/05/97",
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/45b43-2f3c-51fe-560f-2c4f0b438c?alt=media&token=53d75bcd-c257-4a22-ab13-a0d3490aafef",
+            "comment": "I felt like this place wasn't trying at all. I shouldn't have to pay good money to be served vegetables from a can. This place is very dumpy and in a serious need of a fresh paint job. Seriously, how difficult is it to get a clean glass around here? This food will start the zombie apocalypse. Stay away!",
+            "comments": 43,
+            "date": "31/05/2020",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/02b0ace-fe04-2e0-005a-8e8e261f7558?alt=media&token=0470b5dc-c23b-4291-80d2-909238cf4338",
             "likes": 123,
-            "name": "Nikolay",
-            "setRating": 4,
-            "surname": "Khvan"
+            "name": "Steve",
+            "setRating": 1,
+            "surname": "Jobs"
           }
         ],
-        "sell": [
-          {
-            "description": "ffff",
-            "distance": 2,
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/2ec1683-1e02-1d-5354-6d57eecf27?alt=media&token=44038c61-e468-4e53-943a-7922c6822727",
-            "price": "$10",
-            "title": "taco"
+        "sell": {
+          "-MWsdfvk34_GTLAsdfleyX": {
+            "description": "Bibimbap, sometimes romanized as bi bim bap or bi bim bop, is a Korean rice dish. The term bibim means mixing rice, while the bap noun refers to rice. Bibimbap is served as a bowl of warm white rice topped with namul or kimchi and gochujang, soy sauce, or doenjang.",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/fd4bebb-b76-4452-2cae-786877cf6c0b?alt=media&token=2f2559e7-2aa4-4123-89cb-f3cfe006dffe",
+            "price": 15,
+            "title": "Bibimbap"
           },
-          {
-            "description": "ddd",
-            "distance": 3,
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/e742dd-606-a084-e71d-b6421c04550?alt=media&token=4d7a17a6-b055-4e44-813c-509286d25c37",
-            "price": "$13",
-            "title": "title"
+          "-MW92hCm_glGGGF34": {
+            "description": "Kuksu or Kuksi is a Korean noodle dish popular among Koreans in Uzbekistan. It is served cold and often spicy with beef",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/7c71a23-d3fd-f65e-326e-e8270521fba?alt=media&token=4a9f632e-478e-4f42-b211-b468ee913867",
+            "price": 7,
+            "title": "Kuksu"
           },
-          {
-            "description": "aaa",
-            "distance": 16,
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/d43d46-b8eb-f2c1-2e72-565d216ec807?alt=media&token=8c9ac38f-351a-466d-a863-3b887ed3bd34",
-            "price": "$12",
-            "title": "title"
+          "-VGdll30_AGLNnov555": {
+            "description": "Have some old kimchi in the fridge? Make this kimchi jjigae! It’s delicious with fatty pork. Such a comfort food!",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/e2748eb-a255-0d2e-bb3-62e76c4f3?alt=media&token=fb5f6b81-569f-4530-b1f4-cfa13e11eb0e",
+            "price": 15,
+            "title": "Kimchi-jjigae"
           }
-        ]
+        }
       },
       "-MW92_MLYY58N9yhSxJv": {
         "info": {
           "address": {
-            "latitude": 37.76,
-            "longitude": -122.4324
+            "latitude": 34.23,
+            "longitude": -118.5
           },
           "apps": {
             "facebook": "hwangFacebook",
@@ -93,163 +90,63 @@
             "twitter": "@hwang97",
             "whatsApp": "+1457234-12-44"
           },
-          "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/0cf0eac-25c-f6b-482-81c2e4e84c55?alt=media&token=142f5a5a-68a1-4259-b75a-c480b514da7d",
-          "name": "John",
+          "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/ed5cd0b-330f-048-ab4d-853e568dc42?alt=media&token=0108e5bb-857b-472d-930c-ce6629a02a53",
+          "name": "Ishan",
           "phone": "+1(457)234-12-44",
           "ssn": "12344fjsdf",
-          "subTitle": "subTitle",
-          "surname": "Lee",
+          "subTitle": "if you are you looking for the best Indian food, just come and try it!",
+          "surname": "Rodriguez",
           "time": {
             "open": true,
             "weekdays": ["Monday", "Saturday"]
           },
-          "title": "Title"
+          "title": "Indian super food!"
         },
         "reviews": [
           {
-            "comment": "Nice!",
+            "comment": "This is one of my favorite places. This was one of the best mouth-watering burgers I've had grace my taste buds in a long time. I found the ambiance to be very charming. I was happy to see how clean everything was. The waitress was prompt and polite. I'm definitely coming back for more!",
             "comments": 5,
-            "date": "31/05/97",
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/bd34f-3f2-4c72-70af-1b6b01bceee?alt=media&token=65f51107-7c28-429a-807b-4c72d1e9a67d",
-            "likes": 123,
-            "name": "Nikolay",
-            "setRating": 3,
-            "surname": "Khvan"
+            "date": "23/08/2020",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/72eb4c8-5fa0-b81f-e170-35a5ba28e02f?alt=media&token=f03f924d-76f2-4414-a1a6-1ce9dc656beb",
+            "likes": 2,
+            "name": "Bruce",
+            "setRating": 5,
+            "surname": "Kaiser"
           },
           {
-            "comment": "Nice!",
-            "comments": 5,
+            "comment": "I must have ordered the wrong things because the food was terrible. This place is very dumpy and in a serious need of a makeover. I shouldn't have to pay good money to be served vegetables from a can. I felt the prices were too high given the quality of the food. The photos of the food were appetizing and palpable, but didn't live up to the hype. 2 stars.",
+            "comments": 23,
             "date": "31/05/97",
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/e1c206b-d148-23f6-de2a-5dd26e22b5f?alt=media&token=c9ec10d9-ce7d-490b-9356-5b2a0a748f9c",
-            "likes": 123,
-            "name": "Nikolay",
-            "setRating": 3,
-            "surname": "Khvan"
-          },
-          {
-            "comment": "Nice!",
-            "comments": 5,
-            "date": "31/05/97",
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/45b43-2f3c-51fe-560f-2c4f0b438c?alt=media&token=53d75bcd-c257-4a22-ab13-a0d3490aafef",
-            "likes": 123,
-            "name": "Nikolay",
-            "setRating": 4,
-            "surname": "Khvan"
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/b24300-ccb0-06d7-05d5-de4ece8c18?alt=media&token=647f7f53-ccfa-430d-b836-180831ef51f3",
+            "likes": 55,
+            "name": "Saffa",
+            "setRating": 2,
+            "surname": "Bull"
           }
         ],
-        "sell": [
-          {
-            "description": "sdf",
-            "distance": 4,
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/2ec1683-1e02-1d-5354-6d57eecf27?alt=media&token=44038c61-e468-4e53-943a-7922c6822727",
-            "price": "$5",
-            "title": "title"
+        "sell": {
+          "-MW92hCm_SDFgleqop44": {
+            "description": "A samosa is a fried or baked pastry with a savory filling, such as spiced potatoes, onions, peas, cheese, beef and other meats, or lentils. It may take different forms, including triangular, cone, or half-moon shapes, depending on the region",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/cafc67d-f0ee-45ef-4462-8cdf52d6a3?alt=media&token=730a882d-8589-40aa-8bf2-5a813a7340cf",
+            "price": 6,
+            "title": "Samosa"
           },
-          {
-            "description": "sdf",
-            "distance": 45,
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/e742dd-606-a084-e71d-b6421c04550?alt=media&token=4d7a17a6-b055-4e44-813c-509286d25c37",
-            "price": "$555",
-            "title": "title"
-          },
-          {
-            "description": "fd",
-            "distance": 56,
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/d43d46-b8eb-f2c1-2e72-565d216ec807?alt=media&token=8c9ac38f-351a-466d-a863-3b887ed3bd34",
-            "price": "$32",
-            "title": "taco"
+          "-MW92hCm_asdfk302": {
+            "description": "Dhokla is a vegetarian culinary dish that is found mainly in the Indian state of Gujarat and parts of adjacent states. It is made with a fermented batter derived from rice and split urad dal.",
+            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/7366cd7-85e7-4781-1eec-56c0143cec7?alt=media&token=cd2fa6ab-dae3-4eda-8992-12aabd300169",
+            "price": 12,
+            "title": "Dhokla"
           }
-        ]
-      },
-      "-MW92hCm_LYSBZbHJeyX": {
-        "info": {
-          "address": {
-            "latitude": 37.8,
-            "longitude": -122.4324
-          },
-          "apps": {
-            "facebook": "hwangFacebook",
-            "instagram": "hwang.the.human",
-            "twitter": "@hwang97",
-            "whatsApp": "+1457234-12-44"
-          },
-          "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/8cdf2cf-8eb2-70c-257-72ca45dd0158?alt=media&token=237faf17-d6b4-4481-b1d5-5ba77d222596",
-          "name": "Zarina",
-          "phone": "+1(457)234-12-44",
-          "ssn": "234r2345",
-          "subTitle": "subTitle",
-          "surname": "Khvan",
-          "time": {
-            "open": true,
-            "weekdays": ["Monday", "Saturday"]
-          },
-          "title": "Title"
-        },
-        "reviews": [
-          {
-            "comment": "Nice!",
-            "comments": 5,
-            "date": "31/05/97",
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/bd34f-3f2-4c72-70af-1b6b01bceee?alt=media&token=65f51107-7c28-429a-807b-4c72d1e9a67d",
-            "likes": 123,
-            "name": "Nikolay",
-            "setRating": 3,
-            "surname": "Khvan"
-          },
-          {
-            "comment": "Nice!",
-            "comments": 5,
-            "date": "31/05/97",
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/e1c206b-d148-23f6-de2a-5dd26e22b5f?alt=media&token=c9ec10d9-ce7d-490b-9356-5b2a0a748f9c",
-            "likes": 123,
-            "name": "Nikolay",
-            "setRating": 3,
-            "surname": "Khvan"
-          },
-          {
-            "comment": "Nice!",
-            "comments": 5,
-            "date": "31/05/97",
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/45b43-2f3c-51fe-560f-2c4f0b438c?alt=media&token=53d75bcd-c257-4a22-ab13-a0d3490aafef",
-            "likes": 123,
-            "name": "Nikolay",
-            "setRating": 4,
-            "surname": "Khvan"
-          }
-        ],
-        "sell": [
-          {
-            "description": "ffff",
-            "distance": 234,
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/2ec1683-1e02-1d-5354-6d57eecf27?alt=media&token=44038c61-e468-4e53-943a-7922c6822727",
-            "price": "$100",
-            "title": "title"
-          },
-          {
-            "description": "ddd",
-            "distance": 7,
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/e742dd-606-a084-e71d-b6421c04550?alt=media&token=4d7a17a6-b055-4e44-813c-509286d25c37",
-            "price": "$134",
-            "title": "title"
-          },
-          {
-            "description": "aaa",
-            "distance": 4,
-            "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/d43d46-b8eb-f2c1-2e72-565d216ec807?alt=media&token=8c9ac38f-351a-466d-a863-3b887ed3bd34",
-            "price": "$125",
-            "title": "taco"
-          }
-        ]
+        }
       }
     },
     "consumers": {
       "-MW92hCm_LYSBZbHJeyX": {
-        "name": "LoL",
-        "surname": "Lee",
+        "name": "Nikolay",
+        "surname": "Khvan",
         "password": "123",
         "email": "hwang.the.human@gmail.com",
-        "history": [],
-        "cart": []
+        "image": "https://firebasestorage.googleapis.com/v0/b/bume-307515.appspot.com/o/2242ea-437-156-61c6-caaf0cfceaa5?alt=media&token=56032f06-258a-4328-bbcc-13e630e6c39b"
       }
     }
   }

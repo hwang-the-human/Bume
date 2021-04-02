@@ -28,17 +28,16 @@ export default function SearchTabs(props) {
         <Tab.Screen
           name="Food"
           children={() => (
-            <FoodView
-              sheetRef={props.sheetRef}
-              animation={props.animation}
-              foodArray={props.foodArray}
-            />
+            <FoodView sheetRef={props.sheetRef} foodArray={props.foodArray} />
           )}
         />
         <Tab.Screen
           name="Vendor"
           children={() => (
-            <VendorView sheetRef={props.sheetRef} searchText={props.searchText} />
+            <VendorView
+              sheetRef={props.sheetRef}
+              searchText={props.searchText}
+            />
           )}
         />
       </Tab.Navigator>
